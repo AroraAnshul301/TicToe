@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Playfair Display", serif;
+    background: linear-gradient(135deg, #42a5f5, #64b5f6);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+nav {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #1e3a8a;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.gamecontainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 5vh;
+    gap: 40px;
+    width: 90%;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 10vw);
+    grid-template-rows: repeat(3, 10vw);
+    gap: 5px;
+}
+
+.box {
+    background: #ffffff;
+    border-radius: 8px;
+    color: #1e3a8a;
+    font-size: 2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.box:hover {
+    cursor: pointer;
+    background: #90caf9;
+    transform: scale(1.1);
+}
+
+.msg {
+    text-align: center;
+    padding: 10px;
+    font-size: 1.2rem;
+}
+
+.msg .info {
+    margin-top: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.actions {
+    margin-top: 20px;
+}
+
+.actions button {
+    background: #1976d2;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.actions button:hover {
+    background: #ef5350;
+    transform: translateY(-2px);
+}
+
+footer {
+    margin-top: auto;
+    padding: 20px;
+    text-align: center;
+    background: #1e3a8a;
+    color: #fff;
+    width: 100%;
+}
+
+@media screen and (max-width: 700px) {
+    .container {
+        grid-template-columns: repeat(3, 20vw);
+        grid-template-rows: repeat(3, 20vw);
+    }
+
+    .box {
+        font-size: 5vw;
+    }
+
+    .msg .info {
+        font-size: 1.2rem;
+    }
+}
